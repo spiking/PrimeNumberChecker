@@ -14,6 +14,7 @@
 		6F6965AD1CE5D637000975AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F6965AB1CE5D637000975AE /* LaunchScreen.storyboard */; };
 		6F6965B81CE5D637000975AE /* PrimeNumberCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6965B71CE5D637000975AE /* PrimeNumberCheckerTests.swift */; };
 		6F6965C31CE5D637000975AE /* PrimeNumberCheckerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6965C21CE5D637000975AE /* PrimeNumberCheckerUITests.swift */; };
+		6FBDBDD11CE603E00089FD6C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBDBDD01CE603E00089FD6C /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		6F6965BE1CE5D637000975AE /* PrimeNumberCheckerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrimeNumberCheckerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F6965C21CE5D637000975AE /* PrimeNumberCheckerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeNumberCheckerUITests.swift; sourceTree = "<group>"; };
 		6F6965C41CE5D637000975AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FBDBDD01CE603E00089FD6C /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				6F6965A21CE5D637000975AE /* AppDelegate.swift */,
 				6F6965A41CE5D637000975AE /* ViewController.swift */,
+				6FBDBDD01CE603E00089FD6C /* CustomTextField.swift */,
 				6F6965A61CE5D637000975AE /* Main.storyboard */,
 				6F6965A91CE5D637000975AE /* Assets.xcassets */,
 				6F6965AB1CE5D637000975AE /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 			files = (
 				6F6965A51CE5D637000975AE /* ViewController.swift in Sources */,
 				6F6965A31CE5D637000975AE /* AppDelegate.swift in Sources */,
+				6FBDBDD11CE603E00089FD6C /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +486,7 @@
 				6F6965C91CE5D637000975AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6F6965CA1CE5D637000975AE /* Build configuration list for PBXNativeTarget "PrimeNumberCheckerTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +495,7 @@
 				6F6965CC1CE5D637000975AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6F6965CD1CE5D637000975AE /* Build configuration list for PBXNativeTarget "PrimeNumberCheckerUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +504,7 @@
 				6F6965CF1CE5D637000975AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
