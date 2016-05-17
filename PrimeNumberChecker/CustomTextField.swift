@@ -15,13 +15,14 @@ class MyCustomTextField: UITextField {
         self.layer.cornerRadius = 25
         self.layer.borderColor = UIColor.clearColor().CGColor
         self.layer.borderWidth = 1.5
-       // self.layer.opacity = 0.5
+       // self.layer.opacity = 0.3
         self.backgroundColor = UIColor.lightGrayColor()
         self.textColor = UIColor.whiteColor()
         self.textAlignment = .Center
         self.tintColor = UIColor.whiteColor()
         self.keyboardAppearance = .Dark
         self.keyboardType = .NumberPad
+        self.clearButtonMode = .WhileEditing
         self.placeholder = "Enter a number"
         
     }
