@@ -38,7 +38,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         dismissKeyboard()
         
         if enterTextField.text != nil && enterTextField.text != "" {
-            
             if enterTextField.text!.characters.count > 18 {
                 showHighNumberAlert()
             } else {
@@ -75,14 +74,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func animateResult(type: String) {
         
-        self.wrongImage.hidden = false
-        self.checkImage.hidden = false
-        self.resultLabel.hidden = false
-        
-        self.wrongImage.alpha = 0
-        self.checkImage.alpha = 0
-        self.resultLabel.alpha = 0
-        
         if type == "checkImage" {
             UIView.animateWithDuration(1.5, delay:0.0, options:UIViewAnimationOptions.CurveEaseIn, animations: {
                 
@@ -91,7 +82,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 self.resultLabel.text = "\(self.enteredValue) IS A PRIME"
                 
                 }, completion: { finished in
-                    
+                    print("Done - prime!")
             })
         } else {
             UIView.animateWithDuration(1.5, delay:0.0, options:UIViewAnimationOptions.CurveEaseIn, animations: {
@@ -101,7 +92,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 self.resultLabel.text = "\(self.enteredValue) IS NOT A PRIME"
                 
                 }, completion: { finished in
-                    
+                        print("Done - not prime!")
             })
         }
     }
@@ -118,7 +109,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         presentViewController(alert, animated: true, completion: nil)
     }
     
-    // Only take numerical input (iPad)
+    // Only take numerical input, ipad
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         
         let aSet = NSCharacterSet(charactersInString:"0123456789").invertedSet
@@ -129,9 +120,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
-        checkImage.hidden = true
-        wrongImage.hidden = true
-        resultLabel.hidden = true
+        checkImage.alpha = 0
+        wrongImage.alpha = 0
+        resultLabel.alpha = 0
     }
     
     // Dismiss keyboard on tap gesture
@@ -139,7 +130,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
-    
+    // Move view up
     func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
             self.view.frame.origin.y -= keyboardSize.height
@@ -147,6 +138,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    // Move view down
     func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
             self.view.frame.origin.y += keyboardSize.height
